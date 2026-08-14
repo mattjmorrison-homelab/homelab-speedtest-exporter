@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: speedtest-exporter
+  namespace: monitoring
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: speedtest-exporter
+  template:
+    metadata:
+      labels:
+        app: speedtest-exporter
+    spec:
+      containers:
+        - name: speedtest-exporter
+          image: miguelndecarvalho/speedtest-exporter:latest
+          env:
+            - name: CACHE_FOR
+              value: "30"
+          ports:
+            - containerPort: 9798
+              name: http-metrics
+          readinessProbe:
+            httpGet:
+              path: /metrics
+              port: 9798
+            initialDelaySeconds: 10
+            timeoutSeconds: 30
