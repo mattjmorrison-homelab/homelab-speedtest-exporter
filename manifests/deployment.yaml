@@ -23,8 +23,7 @@ spec:
             - containerPort: 9798
               name: http-metrics
           readinessProbe:
-            httpGet:
-              path: /metrics
+            tcpSocket:
               port: 9798
             initialDelaySeconds: 10
-            timeoutSeconds: 30
+            timeoutSeconds: 5
