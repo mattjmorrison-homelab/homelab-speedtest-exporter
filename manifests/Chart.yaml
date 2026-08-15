@@ -1,0 +1,5 @@
+apiVersion: v2
+name: homelab-speedtest-exporter
+description: Internet speedtest metrics exporter
+version: 0.1.0
+appVersion: "latest"

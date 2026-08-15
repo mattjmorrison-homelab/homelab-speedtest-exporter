@@ -1,0 +1,3 @@
+image:
+  repository: miguelndecarvalho/speedtest-exporter
+  tag: latest
