@@ -1,3 +1,3 @@
 image:
   repository: miguelndecarvalho/speedtest-exporter
-  tag: latest
+  digest: sha256:f1064d49124c7fc45faabb87c6c876a2fd04e92b3dc14d4b871301217ba30fed # v3.5.4

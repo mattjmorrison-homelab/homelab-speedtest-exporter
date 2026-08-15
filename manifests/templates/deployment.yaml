@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: speedtest-exporter
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          image: "{{ .Values.image.repository }}@{{ .Values.image.digest }}"
           env:
             - name: CACHE_FOR
               value: "30"
